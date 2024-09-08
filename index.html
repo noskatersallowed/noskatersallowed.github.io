@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSA - No Skaters Allowed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="64a72215db3ba9ffc9600491_KT23_Logo_2-removebg.png" alt="Kappa Alpha Psi Logo" id="logo">
+            <h1>NSA - No Skaters Allowed</h1>
+        </header>
+
+        <!-- Login Section -->
+        <div id="loginSection">
+            <input type="password" id="loginPin" placeholder="Enter the access PIN">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- Mission Section -->
+        <div id="missionSection" style="display: none;">
+            <button onclick="goBack()" id="backButton">Back</button>
+            <input type="text" id="missionDescription" placeholder="Mission description">
+            <select id="personSelector">
+                <!-- Options will be filled by JavaScript -->
+            </select>
+            <button onclick="addMission()">Add Mission</button>
+            <h2>All Missions</h2>
+            <ul id="missionsList"></ul>
+            <button onclick="showLeaderboard()">View Leaderboard</button>
+            <button onclick="showDogWalkingSection()">Dog Walking Schedule</button>
+        </div>
+
+        <!-- Dog Walking Schedule Section -->
+        <div id="dogWalkingSection" style="display: none;">
+            <h2>Dog Walking Schedule</h2>
+            <select id="dogWalkerSelector">
+                <!-- Options will be filled by JavaScript -->
+            </select>
+            <select id="timeSelector">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+            </select>
+            <button onclick="assignDogWalker()">Assign Dog Walker</button>
+            <h2>Scheduled Walkers</h2>
+            <ul id="dogWalkingList"></ul>
+            <button onclick="showMissionSection()">Back to Missions</button>
+        </div>
+
+        <!-- Leaderboard Section -->
+        <div id="leaderboardSection" style="display: none;">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboardList"></ul>
+            <button onclick="showMissionSection()">Back to Missions</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
