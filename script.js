@@ -17,7 +17,7 @@ function login() {
 function populateSelectors() {
     const personSelector = document.getElementById('personSelector');
     const dogWalkerSelector = document.getElementById('dogWalkerSelector');
-    const names = ["Ant", "Chris", "Marcus", "Reezy", "Davo", "Kam", "Kofi", "Lez", "Mo", "Sey", "Ship"];
+    const names = ["Ant", "Chris", "Marcus", "Reezy", "Davo", "Kam", "Kofi", "Lez", "Mo", "Sey", "Ship", "Everyone"];
     
     names.forEach(name => {
         // Add options to mission selector
