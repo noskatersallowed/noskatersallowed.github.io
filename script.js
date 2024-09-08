@@ -204,67 +204,70 @@ function displayLeaderboard(leaderboard) {
         document.getElementById('dogWalkingSection').style.display = 'block';
     }
 
-        // Drive Nich and Chef To Work
-        let driveschedule = [];
+  // Dog Walking Schedule
+    let dogWalkingSchedule = [];
 
-        function assignDogWalker() {
-            const walker = document.getElementById('dogWalkerSelector').value;
-            const time = document.getElementById('timeSelector').value;
-            const currentDate = new Date().toLocaleDateString(); // Capture current date
-            
-            if (walker && time) {
-                dogWalkingSchedule.push({ walker, time, date: currentDate, completed: false });
-                displayDogWalkingSchedule();
-            } else {
-                alert('Please select a driver and a time slot.');
-            }
-        }
-    
-        function displayDogWalkingSchedule() {
-            const dogWalkingList = document.getElementById('dogWalkingList');
-            dogWalkingList.innerHTML = '';
-            
-            dogWalkingSchedule.forEach((schedule, index) => {
-                const scheduleItem = document.createElement('li');
-                scheduleItem.textContent = `${schedule.walker} - ${schedule.time} on ${schedule.date}`;
-                
-                if (!schedule.completed) {
-                    const completeButton = document.createElement('button');
-                    completeButton.textContent = 'Finished';
-                    completeButton.onclick = function() { completeDogWalk(index); };
-                    scheduleItem.appendChild(completeButton);
-                } else {
-                    scheduleItem.style.textDecoration = 'line-through'; // Mark completed walks
-                }
-                dogWalkingList.appendChild(scheduleItem);
-            });
-        }
-    
-        function completeDogWalk(index) {
-            dogWalkingSchedule[index].completed = true;
+    function assignDogWalker() {
+        const walker = document.getElementById('dogWalkerSelector').value;
+        const time = document.getElementById('timeSelector').value;
+        const currentDate = new Date().toLocaleDateString(); // Capture current date
+        
+        if (walker && time) {
+            dogWalkingSchedule.push({ walker, time, date: currentDate, completed: false });
             displayDogWalkingSchedule();
+        } else {
+            alert('Please select a walker and a time slot.');
         }
+    }
+
+    function displayDogWalkingSchedule() {
+        const dogWalkingList = document.getElementById('dogWalkingList');
+        dogWalkingList.innerHTML = '';
+        
+        dogWalkingSchedule.forEach((schedule, index) => {
+            const scheduleItem = document.createElement('li');
+            scheduleItem.textContent = `${schedule.walker} - ${schedule.time} on ${schedule.date}`;
+            
+            if (!schedule.completed) {
+                const completeButton = document.createElement('button');
+                completeButton.textContent = 'Finished';
+                completeButton.onclick = function() { completeDogWalk(index); };
+                scheduleItem.appendChild(completeButton);
+            } else {
+                scheduleItem.style.textDecoration = 'line-through'; // Mark completed walks
+            }
+            dogWalkingList.appendChild(scheduleItem);
+        });
+    }
+
+    function completeDogWalk(index) {
+        dogWalkingSchedule[index].completed = true;
+        displayDogWalkingSchedule();
+    }
+
+    // Show and hide sections
+    function goBack() {
+        document.getElementById('missionSection').style.display = 'none';
+        document.getElementById('loginSection').style.display = 'block';
+    }
+
+    function showLeaderboard() {
+        document.getElementById('missionSection').style.display = 'none';
+        document.getElementById('leaderboardSection').style.display = 'block';
+        updateLeaderboard();
+    }
+
+    function showMissionSection() {
+        document.getElementById('dogWalkingSection').style.display = 'none';
+        document.getElementById('leaderboardSection').style.display = 'none';
+        document.getElementById('missionSection').style.display = 'block';
+    }
+
+    function showDogWalkingSection() {
+        document.getElementById('missionSection').style.display = 'none';
+        document.getElementById('dogWalkingSection').style.display = 'block';
+    }
+
     
-        // Show and hide sections
-        function goBack() {
-            document.getElementById('missionSection').style.display = 'none';
-            document.getElementById('loginSection').style.display = 'block';
-        }
-    
-        function showLeaderboard() {
-            document.getElementById('missionSection').style.display = 'none';
-            document.getElementById('leaderboardSection').style.display = 'block';
-            updateLeaderboard();
-        }
-    
-        function showMissionSection() {
-            document.getElementById('dogWalkingSection').style.display = 'none';
-            document.getElementById('leaderboardSection').style.display = 'none';
-            document.getElementById('missionSection').style.display = 'block';
-        }
-    
-        function showDogWalkingSection() {
-            document.getElementById('missionSection').style.display = 'none';
-            document.getElementById('dogWalkingSection').style.display = 'block';
-        }
-    
+   
+   
