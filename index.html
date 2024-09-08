@@ -49,6 +49,21 @@
             <button onclick="showMissionSection()">Back to Missions</button>
         </div>
 
+                <!-- Dog Walking Schedule Section -->
+        <div id="dogWalkingSection" style="display: none;">
+            <h2>Dog Walking Schedule</h2>
+            <select id="dogWalkerSelector">
+                <!-- Options will be filled by JavaScript -->
+            </select>
+            <select id="timeSelector">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+            </select>
+            <button onclick="assignDogWalker()">Assign Dog Walker</button>
+            <h2>Scheduled Walkers</h2>
+            <ul id="dogWalkingList"></ul>
+            <button onclick="showMissionSection()">Back to Missions</button>
+        </div>
         <!-- Leaderboard Section -->
         <div id="leaderboardSection" style="display: none;">
             <h2>Leaderboard</h2>
