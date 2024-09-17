@@ -3,79 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSA - No Skaters Allowed</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #E11D3F; /* Crimson background */
-        }
-        header {
-            background-color: #000000; /* Black header */
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FFFFFF; /* White text */
-        }
-        nav {
-            display: flex;
-        }
-        nav a {
-            color: #FFFFFF; /* White text */
-            text-decoration: none;
-            padding: 10px 20px;
-            margin-left: 5px;
-            border-radius: 5px 5px 0 0;
-            transition: background-color 0.3s;
-        }
-        nav a:hover, nav a.active {
-            background-color: #E11D3F; /* Crimson background on hover */
-        }
-        .content {
-            padding: 20px;
-            color: #FFFFFF; /* White text */
-            text-align: center;
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            background-color: #FFFFFF; /* White button */
-            border: none;
-            color: #E11D3F; /* Crimson text */
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    </style>
+    <title>NO SKATERS ALLOWED</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">NSA</div>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#rules">Rules</a>
-            <a href="#events">Events</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <div class="content">
-        <h1>NO SKATERS ALLOWED</h1>
-        <p>Welcome to the official NSA website. We're dedicated to maintaining skater-free zones.</p>
-        <a href="#join" class="cta-button">Join NSA</a>
+    <div class="login-container">
+        <h2>Login to Access</h2>
+        <input type="password" id="password" placeholder="Enter Password" autocomplete="off">
+        <button onclick="checkPassword()">Login</button>
+        <p id="error-msg" style="color: red; display: none;">Incorrect Password!</p>
     </div>
+
+    <!-- Content that should be hidden until correct password is entered -->
+    <div id="secret-content" style="display: none;">
+        <header>
+            <h1></h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#board">Board of Directors</a></li>
+                <li><a href="#proverbs">Proverbs</a></li>
+                <li><a href="#founders">Founders</a></li>
+                <li><a href="#mtaQuiz">MTA Quiz</a></li>
+                <li><a href="#definitions">Definitions</a></li>
+                <li><a href="#DIKKS">DIKKS</a></li>
+            </ul>
+        </nav>
+        <section id="board">
+            <h2>Board of Directors</h2>
+            <div>
+                <p>Coming soon..</p>
+            </div>
+        </section>
+        <section id="proverbs">
+            <h2>Proverbs</h2>
+            <div>
+                <p>Proverbs 3:1-20: "My son, forget not my law; but let thine heart keep my commandments: For length of days, and long life, and peace, shall they add to thee..."</p>
+            </div>
+        </section>
+        <section id="founders">
+            <h2>Founders</h2>
+            <div>
+                <p>Coming soon..</p>
+            </div>
+        </section>
+        <section id="mtaQuiz">
+            <h2>MTA Quiz</h2>
+            <form id="quizForm"></form>
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+            <div id="quizResult"></div>
+        </section>
+        <section id="definitions">
+            <h2>Definitions</h2>
+            <div>
+                <p><strong>Deference:</strong> The willful submission of one’s own will to the whims and wishes of another.</p>
+                <p><strong>Discretion:</strong> Discretion is key. Without it, all things will fail. It is the art of cloaking one’s feelings, emotions, and physical state.</p>
+                <p><strong>Excuses:</strong> Excuses are tools of the incompetent, which lead to monuments of nothingness. Those who indulge in them are seldom capable of anything else.</p>
+                <p><strong>The Essence of Time:</strong> To be early is to be on time, to be on time is to be late, to be late is to never have shown up at all.</p>
+                <p><strong>Effort:</strong> Anything worth doing is worth overdoing.</p>
+                <p><strong>Change:</strong> The only thing in the universe that remains the same is change; those who adapt persevere, those who do not merely fade away.</p>
+                <p><strong>Sass:</strong> Insolent, impudent, impertinent talk considered disrespectful speech or backtalk. "I ain’t ask for that."</p>
+                <p><strong>Fear:</strong> Fear is a mindkiller. You must face it and let it pass through you.</p>
+                <p><strong>Be Strong:</strong> We are not here to play, dream, or drift. We have hard work to do, heavy loads to lift. We shun not the struggle. For it is God's gift to be strong.</p>
+                <p><strong>Pain:</strong> Pain is temporary, pride is forever.</p>
+                <p><strong>Commitment:</strong> As a man, I will choose to do what I say I am going to do. Unless commitment is made, there are only promises and hopes; but no plans. I will transform my promises into reality. I will have integrity. I will stand on my word. I will commit.</p>
+                <p><strong>Perseverance:</strong> To continue to achieve despite difficulty. Persistence overcomes resistance.</p>
+                <p><strong>Sacrifice:</strong> The art of giving up something good for something better.</p>
+                <p><strong>Patience:</strong> Patience is not a passive state but an active practice.</p>
+            </div>
+        </section>
+        <section id="DIKKS">
+            <h2>DIKKS</h2>
+            <div>
+                <p>Coming Soon</p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 NSA. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
