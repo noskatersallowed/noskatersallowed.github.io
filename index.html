@@ -61,7 +61,7 @@
             margin: 0;
         }
 
-        nav ul li a, nav ul li button {
+        nav ul li a {
             display: block;
             padding: 15px;
             text-decoration: none;
@@ -69,35 +69,24 @@
             cursor: pointer;
         }
 
-        nav ul li a:hover, nav ul li button:hover {
+        nav ul li a:hover {
             background-color: #8f0000;
         }
 
-        /* Collapsible content styles */
-        .collapsible {
-            cursor: pointer;
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            background-color: #b50000;
             padding: 10px;
-            text-align: left;
-            border: none;
-            outline: none;
-            font-size: 18px;
+            margin: 0;
+        }
+
+        section div {
             background-color: #333;
-            margin: 5px 0;
-            color: #fff;
-            width: 100%;
-        }
-
-        .active, .collapsible:hover {
-            background-color: #555;
-        }
-
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #444;
-            border-left: 2px solid #ccc;
-            margin-bottom: 10px;
+            padding: 20px;
+            border-left: 5px solid #b50000;
         }
 
         footer {
@@ -128,12 +117,12 @@
                 <li><a href="#mtaQuiz">MTA Quiz</a></li>
                 <li><a href="#definitions">Definitions</a></li>
                 <li><a href="#DIKKS">DIKKS</a></li>
-                <li><button class="collapsible">Info</button></li>
             </ul>
         </nav>
-        <div id="info-content" class="content">
-            <button class="collapsible">Single Letter Chapters</button>
-            <div class="content">
+
+        <section id="single-letter-chapters">
+            <h2>Single Letter Chapters</h2>
+            <div>
                 <ul>
                     <li><strong>Alpha</strong> - Indiana University, Bloomington, IN (1911)</li>
                     <li><strong>Beta</strong> - University of Illinois, Urbana-Champaign, IL (1913)</li>
@@ -147,8 +136,11 @@
                     <li><strong>Kappa</strong> - Meharry Medical College, Nashville, TN (1919)</li>
                 </ul>
             </div>
-            <button class="collapsible">Chapters in Maryland</button>
-            <div class="content">
+        </section>
+
+        <section id="chapters-maryland">
+            <h2>Chapters in Maryland</h2>
+            <div>
                 <ul>
                     <li><strong>Alpha Iota</strong> - University of Maryland, College Park</li>
                     <li><strong>Gamma Kappa</strong> - Morgan State University</li>
@@ -160,7 +152,7 @@
                     <li><strong>Kappa Rho</strong> - Bowie State University</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
         <section id="board">
             <h2>Board of Directors</h2>
@@ -217,20 +209,6 @@
     </div>
 
     <script>
-        // JavaScript for handling collapsible content
-        const collapsibles = document.querySelectorAll(".collapsible");
-        collapsibles.forEach((collapsible) => {
-            collapsible.addEventListener("click", function () {
-                this.classList.toggle("active");
-                const content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        });
-
         function checkPassword() {
             const password = document.getElementById("password").value;
             const errorMsg = document.getElementById("error-msg");
@@ -247,4 +225,5 @@
     </script>
 </body>
 </html>
+
 
