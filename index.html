@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NO SKATERS ALLOWED</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles for collapsible content */
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            background-color: #f1f1f1;
+            margin: 5px 0;
+            width: 100%;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-left: 2px solid #ccc;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
@@ -17,7 +44,7 @@
     <!-- Content that should be hidden until correct password is entered -->
     <div id="secret-content" style="display: none;">
         <header>
-            <h1></h1>
+            <h1>NO SKATERS ALLOWED</h1>
         </header>
         <nav>
             <ul>
@@ -27,8 +54,40 @@
                 <li><a href="#mtaQuiz">MTA Quiz</a></li>
                 <li><a href="#definitions">Definitions</a></li>
                 <li><a href="#DIKKS">DIKKS</a></li>
+                <li><button class="collapsible">Info</button></li>
             </ul>
         </nav>
+        <div id="info-content" class="content">
+            <button class="collapsible">Single Letter Chapters</button>
+            <div class="content">
+                <ul>
+                    <li><strong>Alpha</strong> - Indiana University, Bloomington, IN (1911)</li>
+                    <li><strong>Beta</strong> - University of Illinois, Urbana-Champaign, IL (1913)</li>
+                    <li><strong>Gamma</strong> - University of Iowa, Iowa City, IA (1914)</li>
+                    <li><strong>Delta</strong> - Wilberforce University, Wilberforce, OH (1915)</li>
+                    <li><strong>Epsilon</strong> - Lincoln University, Lincoln, PA (1915)</li>
+                    <li><strong>Zeta</strong> - The Ohio State University, Columbus, OH (1915)</li>
+                    <li><strong>Eta</strong> - University of Nebraska, Lincoln, NE (1916)</li>
+                    <li><strong>Theta</strong> - Northwestern University, Evanston, IL (1917)</li>
+                    <li><strong>Iota</strong> - University of Chicago, Chicago, IL (1918)</li>
+                    <li><strong>Kappa</strong> - Meharry Medical College, Nashville, TN (1919)</li>
+                </ul>
+            </div>
+            <button class="collapsible">Chapters in Maryland</button>
+            <div class="content">
+                <ul>
+                    <li><strong>Alpha Iota</strong> - University of Maryland, College Park</li>
+                    <li><strong>Gamma Kappa</strong> - Morgan State University</li>
+                    <li><strong>Epsilon Gamma</strong> - Coppin State University</li>
+                    <li><strong>Kappa Phi</strong> - Towson University</li>
+                    <li><strong>Lambda Gamma</strong> - Johns Hopkins University</li>
+                    <li><strong>Pi Eta</strong> - Salisbury University</li>
+                    <li><strong>Theta Theta</strong> - Frostburg State University</li>
+                    <li><strong>Kappa Rho</strong> - Bowie State University</li>
+                </ul>
+            </div>
+        </div>
+
         <section id="board">
             <h2>Board of Directors</h2>
             <div>
@@ -83,7 +142,35 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for handling collapsible content
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach((collapsible) => {
+            collapsible.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            const errorMsg = document.getElementById("error-msg");
+            const secretContent = document.getElementById("secret-content");
+
+            // Check if the password is correct (replace 'yourPassword' with the actual password)
+            if (password === 'yourPassword') {
+                errorMsg.style.display = 'none';
+                secretContent.style.display = 'block';
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
 
