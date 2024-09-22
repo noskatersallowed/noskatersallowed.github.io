@@ -144,24 +144,16 @@
                             
                     
 
-<section id="brothers">
-    <h2>Brothers</h2>
-    <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterNames()">
-    <div id="brothersList">
-        <ul>
-            <li class="brother-info">
-                <strong>Name: Brother Name</strong><br>
-                <strong>From:</strong> City, State<br>
-                <strong>Age:</strong> Age<br>
-                <strong>Birthday:</strong> Date of Birth<br>
-                <strong>Snacks:</strong> Favorite snacks<br>
-                <strong>Major:</strong> Major subject<br>
-                <!-- Additional fields -->
-            </li>
-            <!-- Additional entries -->
-        </ul>
-    </div>
-</section>
+<div id="brotherInfoDisplay" style="display:none;">
+    <p><strong>Name:</strong> <span id="nameDisplay"></span></p>
+    <p><strong>From:</strong> <span id="fromDisplay"></span></p>
+    <p><strong>Age/Classification:</strong> <span id="ageDisplay"></span></p>
+    <p><strong>Birthday:</strong> <span id="birthdayDisplay"></span></p>
+    <p><strong>Favorite Food:</strong> <span id="snacksDisplay"></span></p>
+    <p><strong>Major:</strong> <span id="majorDisplay"></span></p>
+    <!-- Add more spans for additional fields -->
+</div>
+
 
 
     
