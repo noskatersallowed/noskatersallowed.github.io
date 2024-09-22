@@ -146,18 +146,19 @@
 
 <section id="brothers">
     <h2>Brothers</h2>
-    <div>
+    <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterNames()">
+    <div id="brothersList">
         <ul>
-            <li>
-                <strong>Brother Name</strong><br>
+            <li class="brother-info">
+                <strong>Name: Brother Name</strong><br>
                 <strong>From:</strong> City, State<br>
-                <strong>Age:</strong> Age in years<br>
-                <strong>Birthday:</strong> MM/DD/YYYY<br>
+                <strong>Age:</strong> Age<br>
+                <strong>Birthday:</strong> Date of Birth<br>
                 <strong>Snacks:</strong> Favorite snacks<br>
                 <strong>Major:</strong> Major subject<br>
-                <!-- Add more details as needed -->
+                <!-- Additional fields -->
             </li>
-            <!-- Repeat the <li> block for each brother with their respective details -->
+            <!-- Additional entries -->
         </ul>
     </div>
 </section>
