@@ -175,3 +175,10 @@ footer {
 .bio-card p {
     margin: 5px 0;
 }
+
+.contact-separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 255, 0, 0), rgba(0, 255, 0, 0.75), rgba(0, 255, 0, 0));
+    margin: 20px 0;
+}
