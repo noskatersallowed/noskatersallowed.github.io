@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kappa Alpha Psi Classified Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="animate-fade-in">
+            <div class="logo-container">
+                <img src="KAPsiCrest.png" alt="Kappa Alpha Psi Coat of Arms" class="coat-of-arms">
+            </div>
+            <h1>TOP SECRET: KAPPA ALPHA PSI CLASSIFIED PORTAL</h1>
+            <p>SECURITY LEVEL: ULTRA CLEARANCE REQUIRED</p>
+        </header>
+        
+        <div id="login-container" class="animate-slide-up">
+            <h2>SECURE ACCESS POINT</h2>
+            <form id="login-form" onsubmit="event.preventDefault(); authenticate();">
+                <div class="input-container">
+                    <i data-lucide="lock" class="icon"></i>
+                    <input type="password" id="password" placeholder="ENTER CLEARANCE CODE" required>
+                </div>
+                <button type="submit" class="auth-button">
+                    <i data-lucide="shield" class="icon"></i>
+                    AUTHENTICATE
+                </button>
+                <p id="error-message" class="error"></p>
+            </form>
+        </div>
 
+        <div id="content" class="hidden animate-fade-in">
+            <nav>
+                <ul id="section-list"></ul>
+            </nav>
+            <div id="section-content"></div>
+        </div>
+
+        <footer>
+            <p>© 2024 KAPPA ALPHA PSI. CLASSIFIED MATERIAL - AUTHORIZED PERSONNEL ONLY</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
