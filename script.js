@@ -84,6 +84,10 @@ const sectionContent = {
     <dt>We dont know</dt>
     <dd>Fear we deviate, Fear we articulate, For we do not know at this present date, brother name</dd>
 </dl>
+   <dl>
+            <dt>Fraternalism</dt>
+            <dd>The proper attitude to take towards an errant brother is one of tolerance and sympathetic understanding. Condemnation and desertion are the last words of a true fraternity's man vocabulary. Traditionally, differences are settled within the bond. Never carried to nor discussed with non-members of the fraternity.</dd>
+        </dl>
     
     `,
     info: `
