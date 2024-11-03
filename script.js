@@ -91,7 +91,12 @@ const sectionContent = {
             <dt>Fraternalism</dt>
             <dd>The proper attitude to take towards an errant brother is one of tolerance and sympathetic understanding. Condemnation and desertion are the last words of a true fraternity's man vocabulary. Traditionally, differences are settled within the bond. Never carried to nor discussed with non-members of the fraternity.</dd>
    </dl>
-    
+
+      <dl>
+            <dt>Chilling</dt>
+            <dd>Chilling, chilling, chilling. Words that describe we. Chilling, chilling, chilling. Not the way to be. Some say we bake, some say we skate but. fall 24 STRIVESSS to be great. With the guidance of Ser, adp, polemarch of ai and woody, we'll progress and excel and earn our way once back from hell. Until the day we cross those burning sands, on our way to Kappa land.</dd>
+   </dl>
+
     `,
     info: `
         <h3>Invicutus: Out of the night that covers me,
