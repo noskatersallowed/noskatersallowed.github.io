@@ -162,6 +162,16 @@ const sectionContent = {
 <p><strong>Initiated:</strong> Spr 22</p>
 <p><strong>Line Number:</strong> 3</p>
 </div> `
+
+  <hr class="contact-separator">
+    <div class="contact-info">
+        <h4>Rho Phi</h4>
+        <p><strong>Name:</strong> Kelvin</p>
+        <p><strong>Phone:</strong> (443) 905-2383</p>
+        <p><strong>Big Brother:</strong> Kwiet Storm</p>
+        <p><strong>Initiated:</strong> ??</p>
+        <p><strong>Line Number:</strong> ??</p>
+    </div>
 };
 
 const bios = [
@@ -170,7 +180,7 @@ const bios = [
     { number: 1.5, name: "Agent (Lez) Lesley Ofosu", origin: "Baltimore", major: "Arch", siblings: "Lawrence, Lauren (1 bro, 1 sis)", mother: "Ms. Linda",  birthday: "", age: "19", classification: "" },
     { number: 2.5, name: "Agent (Moe) Mohamed Cole", origin: "Bowie", major: "INSS", siblings: "Ridwan, Abass (Passed)", mother: "Alima",  birthday: "", age: "21", classification: "" },
     { number: 3.5, name: "Agent (Chris) Christian Sampson", origin: "PG", major: "Nursing", siblings: "Camryn, Ariana (2 sis)", mother: "Ms. Marsha", age: "18", classification: "" },
-    { number: 4.5, name: "Agent (Ant) Anthony Noakes", origin: "Philly", major: "Chem", siblings: "Nysear, Aaliyah", mother: "Ms. Farrar",  birthday: "", age: "", classification: "" },
+    { number: 4.5, name: "Agent (Ant) Anthony Noakes", origin: "Philly", major: "Chem", siblings: "Nysear, Aaliyah", mother: "Ms. Farrar",  birthday: "", age: "20", classification: "" },
     { number: 5.5, name: "Agent (Davo) David Osadiaye", origin: "Bowie", major: "INSS", siblings: "Kenneth, Lucky, Nate, Nancy (1 sis, 3 bros)", mother: "Ms. Julie",  birthday: "", classification: "" },
     { number: 6.5, name: "Agent (Sey) Seydina Salla ", origin: "Senegal, Africa/ Houston", major: "Accounting", siblings: "Fatou, Naya, Issa, Aminata, Adja, Ibrahima, El Hadji", mother: "Ms. Kone", birthday: "", classification: "Senior"},
     { number: 7.5, name: "Agent (Reezy) Terell Reed", origin: "DC", major: "Computer Science", siblings: "Randi, Que (2 sis)", mother: "Ms. Ebony",  birthday: "Jun 16, 2004", age: "20", classification: "Senior"},
