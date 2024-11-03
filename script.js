@@ -76,18 +76,21 @@ const sectionContent = {
             <dt>Bam Bam Proclamation</dt>
             <dd>Must we endure these physical pains and mental gains to obtain social fame. No, If we get hurt who are we to blame, ourselves! I know the difference between right and wrong but to build our self confidence I will go on, I will weather the storm. I must be strong, I must be strong.</dd>
         </dl>
+        
         <dl>
         <dt>HAZE HAZE???</dt>
         <dd>Haze, haze, Kappas don’t haze. Kappa Alpha Psi is a non hazing fraternity. All Kappas do is discipline and teach. We can’t believe you asked us that. We oughta haze you. Who? You! Who? You! Who? You!!! However, due to the current state of pledging. Our Grand Polemarch Jimmy McMickle has given us the opportunity to exercise our right to snitch. But, since we’re all here. Let’s get this party started!</dd>
-    </dl>
+        </dl>
+        
     <dl>
     <dt>We dont know</dt>
     <dd>Fear we deviate, Fear we articulate, For we do not know at this present date, brother name</dd>
-</dl>
+    </dl>
+    
    <dl>
             <dt>Fraternalism</dt>
             <dd>The proper attitude to take towards an errant brother is one of tolerance and sympathetic understanding. Condemnation and desertion are the last words of a true fraternity's man vocabulary. Traditionally, differences are settled within the bond. Never carried to nor discussed with non-members of the fraternity.</dd>
-        </dl>
+   </dl>
     
     `,
     info: `
