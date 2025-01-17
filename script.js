@@ -74,4 +74,170 @@ const sectionContent = {
             <p>Finds and shall find me unafraid.</p>
             <br>
             <p>It matters not how strait the gate,</p>
+            <p>How charged with punishments the scroll,</p>
+            <p>I am the master of my fate,</p>
+            <p>I am the captain of my soul.</p>
+        </div>
+    `,
+    otherchapters: `
+        <h3>Chapter Information</h3>
+        <div class="contact-info">
+            <h4>Xi Kappa Chapter</h4>
+            <p><strong>Name:</strong> Bruno Kalogi</p>
+            <p><strong>Phone:</strong> (860) 629-9640</p>
+            <p><strong>Big Brother:</strong> Primetime</p>
+            <p><strong>Initiated:</strong> Spring 2019</p>
+            <p><strong>Line Number:</strong> 8 (Tail)</p>
+        </div>
+        <hr class="contact-separator">
+        <div class="contact-info">
+            <h4>Pi Psi</h4>
+            <p><strong>Name:</strong> Sevon</p>
+            <p><strong>Phone:</strong> (347) 595-3688</p>
+            <p><strong>Big Brother:</strong> Tre Rokk</p>
+            <p><strong>Initiated:</strong> Spr 14</p>
+            <p><strong>Line Number:</strong> 3</p>
+        </div>
+        <hr class="contact-separator">
+        <div class="contact-info">
+            <h4>QA</h4>
+            <p><strong>Name:</strong> Japhan Lupuku</p>
+            <p><strong>Phone:</strong> (347) 645-0522</p>
+            <p><strong>Big Brother:</strong> Pooks</p>
+            <p><strong>Initiated:</strong> Spr 24</p>
+            <p><strong>Line Number:</strong> 4</p>
+        </div>
+        <hr class="contact-separator">
+        <div class="contact-info">
+            <h4>Xi Kappa</h4>
+            <p><strong>Name:</strong> Mikey</p>
+            <p><strong>Phone:</strong> (947) 686-5266</p>
+            <p><strong>Big Brother:</strong> N/A</p>
+            <p><strong>Initiated:</strong> Spr 24</p>
+            <p><strong>Line Number:</strong> 3</p>
+        </div>
+        <hr class="contact-separator">
+        <div class="contact-info">
+            <h4>Xi Kappa</h4>
+            <p><strong>Name:</strong> Kian</p>
+            <p><strong>Phone:</strong> (202) 590-3586</p>
+            <p><strong>Big Brother:</strong> Too Smooth</p>
+            <p><strong>Initiated:</strong> Spr 22</p>
+            <p><strong>Line Number:</strong> 3</p>
+        </div>
+        <hr class="contact-separator">
+        <div class="contact-info">
+            <h4>Rho Phi</h4>
+            <p><strong>Name:</strong> Kelvin</p>
+            <p><strong>Phone:</strong> (443) 905-2383</p>
+            <p><strong>Big Brother:</strong> Kwiet Storm</p>
+            <p><strong>Initiated:</strong> N/A</p>
+            <p><strong>Line Number:</strong> N/A</p>
+        </div>
+    `
+};
+
+const bios = [
+    { number: 0, name: "Agent (Kam) Kamron Hampton", origin: "Baltimore", major: "Engineering Physics", siblings: "Bri, Dre, Shawn, Vonsha (2 sis, 2 bros)", mother: "Ms. Tiffany", birthday: "Aug 24, 2005", age: "19", classification: ""},
+    { number: 0.5, name: "Agent (Kofi) Jaden Koranteng", origin: "Laurel", major: "Computer Science", siblings: "Kori (1 bro)", mother: "Ms. Debra", birthday: "", age: "20", classification: ""},
+    { number: 1.5, name: "Agent (Lez) Lesley Ofosu", origin: "Baltimore", major: "Arch", siblings: "Lawrence, Lauren (1 bro, 1 sis)", mother: "Ms. Linda", birthday: "", age: "19", classification: ""},
+    { number: 2.5, name: "Agent (Moe) Mohamed Cole", origin: "Bowie", major: "INSS", siblings: "Ridwan, Abass (Passed)", mother: "Alima", birthday: "", age: "21", classification: ""},
+    { number: 3.5, name: "Agent (Chris) Christian Sampson", origin: "PG", major: "Nursing", siblings: "Camryn, Ariana (2 sis)", mother: "Ms. Marsha", age: "18", classification: ""},
+    { number: 4.5, name: "Agent (Ant) Anthony Noakes", origin: "Philly", major: "Chem", siblings: "Nysear, Aaliyah", mother: "Ms. Farrar", birthday: "", age: "20", classification: ""},
+    { number: 5.5, name: "Agent (Davo) David Osadiaye", origin: "Bowie", major: "INSS", siblings: "Kenneth, Lucky, Nate, Nancy (1 sis, 3 bros)", mother: "Ms. Julie", birthday: "", classification: ""},
+    { number: 6.5, name: "Agent (Sey) Seydina Salla", origin: "Senegal, Africa/ Houston", major: "Accounting", siblings: "Fatou, Naya, Issa, Aminata, Adja, Ibrahima, El Hadji", mother: "Ms. Kone", birthday: "", classification: "Senior"},
+    { number: 7.5, name: "Agent (Reezy) Terell Reed", origin: "DC", major: "Computer Science", siblings: "Randi, Que (2 sis)", mother: "Ms. Ebony", birthday: "Jun 16, 2004", age: "20", classification: "Senior"},
+    { number: 8.5, name: "Agent (Marc) Marcus Mclean", origin: "Atlanta", major: "Mech. Eng", siblings: "???", mother: "???", birthday: "Sep 19, 2001", age: "23", classification: ""},
+    { number: 9.5, name: "Agent (Ship) Demeir Shipley", origin: "Tuskegee, AL", major: "BA", siblings: "???", mother: "Ms. Gail", birthday: "", age: "", classification: "Senior"}
+];
+
+function renderSections() {
+    const sectionList = document.getElementById('section-list');
+    sectionList.innerHTML = '';
+    
+    sections.forEach(section => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <button onclick="toggleSection('${section.id}')">
+                <span><i data-lucide="${section.icon}"></i> ${section.title}</span>
+                <i data-lucide="chevron-down" class="toggle-icon"></i>
+            </button>
+        `;
+        sectionList.appendChild(li);
+    });
+    lucide.createIcons();
+}
+
+function toggleSection(sectionId) {
+    const sectionContentDiv = document.getElementById('section-content');
+    const section = sections.find(s => s.id === sectionId);
+    
+    if (sectionContentDiv.dataset.activeSection === sectionId) {
+        sectionContentDiv.innerHTML = '';
+        sectionContentDiv.dataset.activeSection = '';
+    } else {
+        if (sectionId === 'bios') {
+            renderBios(sectionContentDiv);
+        } else {
+            const content = sectionContent[sectionId] || `<p>Content for ${section.title}</p>`;
+            sectionContentDiv.innerHTML = `
+                <div class="section-content">
+                    <h2><i data-lucide="${section.icon}"></i> ${section.title}</h2>
+                    ${content}
+                </div>
+            `;
+        }
+        sectionContentDiv.dataset.activeSection = sectionId;
+    }
+
+    const buttons = document.querySelectorAll('#section-list button');
+    buttons.forEach(button => {
+        const icon = button.querySelector('.toggle-icon');
+        if (button.textContent.includes(section.title)) {
+            icon.setAttribute('data-lucide', 
+                sectionContentDiv.dataset.activeSection === sectionId ? 'chevron-up' : 'chevron-down');
+        } else {
+            icon.setAttribute('data-lucide', 'chevron-down');
+        }
+    });
+    lucide.createIcons();
+}
+
+function renderBios(container) {
+    let bioHTML = `
+        <div class="section-content">
+            <h2><i data-lucide="user"></i> AGENT PROFILES</h2>
+            <div class="bio-grid">
+    `;
+    
+    bios.sort((a, b) => a.number - b.number).forEach(bio => {
+        bioHTML += `
+            <div class="bio-card">
+                <h3>${bio.name}</h3>
+                <p><strong>Number:</strong> ${bio.number}</p>
+                <p><strong>Origin:</strong> ${bio.origin}</p>
+                <p><strong>Major:</strong> ${bio.major}</p>
+                <p><strong>Siblings:</strong> ${bio.siblings}</p>
+                <p><strong>Mother:</strong> ${bio.mother}</p>
+                ${bio.birthday ? `<p><strong>Birthday:</strong> ${bio.birthday}</p>` : ''}
+                ${bio.age ? `<p><strong>Age:</strong> ${bio.age}</p>` : ''}
+                ${bio.classification ? `<p><strong>Classification:</strong> ${bio.classification}</p>` : ''}
+            </div>
+        `;
+    });
+
+    bioHTML += `
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = bioHTML;
+    lucide.createIcons();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+    renderSections();
+    toggleSection('call'); // Show first section by default
+});
 
